@@ -14,9 +14,7 @@ class CodingchallengeApplicationTests {
 	@Autowired
 	private CodingQuestionsService codingService;
 
-	@Test
-	void contextLoads() {
-	}
+	
 
 	@Test
 	public void primeCountTest() {
