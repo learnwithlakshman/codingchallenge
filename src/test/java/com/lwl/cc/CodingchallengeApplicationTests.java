@@ -15,17 +15,40 @@ class CodingchallengeApplicationTests {
 	private CodingQuestionsService codingService;
 
 	
+	@Test
+	public void searchTestWithKey() {
+		boolean res = codingService.search(new int[] {0,2,3,5,7,9,10,6},6);
+		assertEquals(true, res);
+	}
+	
+	@Test
+	public void searchTestWithoutKey() {
+		boolean res = codingService.search(new int[] {0,2,3,5,7,9,10,6},16);
+		assertEquals(false, res);
+	}
 
 	@Test
 	public void primeCountTest() {
-		int res = codingService.countPrimes(new int[] {2,3,5,7,9,10,6});
+		int res = codingService.countPrimes(new int[] {0,2,3,5,7,9,10,6});
 		assertEquals(4, res);
 	}
 	
 	@Test
-	public void biggestOfThreeNumbers() {
+	public void biggestOfThreeNumbersThridEle() {
 		int res = codingService.biggest(2,4,9);
 		assertEquals(9, res);
+	}
+	
+	@Test
+	public void biggestOfThreeNumbersFirstEle() {
+		int res = codingService.biggest(12,4,9);
+		assertEquals(12, res);
+	}
+	
+	@Test
+	public void biggestOfThreeNumbersMiddleEle() {
+		int res = codingService.biggest(2,14,9);
+		assertEquals(14, res);
 	}
 	
 	@Test
