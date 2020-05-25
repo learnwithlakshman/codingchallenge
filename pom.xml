@@ -16,6 +16,9 @@
 	<description>Spring Boot Application for Coding Challenge</description>
 
 	<properties>
+	  <sonar.exclusions>
+      **/CodingchallengeApplication.java
+     </sonar.exclusions>
 		<java.version>1.8</java.version>
 	</properties>
 

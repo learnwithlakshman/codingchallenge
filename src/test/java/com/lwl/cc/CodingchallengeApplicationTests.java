@@ -34,13 +34,18 @@ class CodingchallengeApplicationTests {
 	}
 	
 	@Test
-	public void biggestOfThreeNumbersThridEle() {
-		int res = codingService.biggest(2,4,9);
-		assertEquals(9, res);
+	public void biggestOfThreeNumbersTrueFlase() {
+		int res = codingService.biggest(12,9,13);
+		assertEquals(13, res);
 	}
 	
 	@Test
-	public void biggestOfThreeNumbersFirstEle() {
+	public void biggestOfThreeNumberFaseTrue() {
+		int res = codingService.biggest(12,13,9);
+		assertEquals(13, res);
+	}
+	@Test
+	public void biggestOfThreeNumbersFirstEleBothTrue() {
 		int res = codingService.biggest(12,4,9);
 		assertEquals(12, res);
 	}
@@ -50,6 +55,18 @@ class CodingchallengeApplicationTests {
 		int res = codingService.biggest(2,14,9);
 		assertEquals(14, res);
 	}
+	
+	@Test
+	public void biggestOfThreeNumbersThridEle() {
+		int res = codingService.biggest(2,4,9);
+		assertEquals(9, res);
+	}
+	
+	
+	
+	
+	
+
 	
 	@Test
 	public void biggestOfNnumbers() {
